@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parisar Developers | Approved plotted layouts</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap">
+<style>
+:root{--bg:#f6f6f2;--ink:#16181a;--muted:#585d60;--green:#1f6fb0;--green-ink:#fff;--brass:#d4a017;--olive:#8a9a2b;--card:#fff;--line:#dcdcd2;--plot:#e8e8de;--road:#f6f6f2;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171a;--ink:#f0f1ec;--muted:#a9afb2;--green:#5aa6e0;--green-ink:#0d1b28;--brass:#e0b43a;--olive:#a9bb4a;--card:#1d2226;--line:#2f363b;--plot:#262d32;--road:#14171a}}
+:root[data-theme="dark"]{--bg:#14171a;--ink:#f0f1ec;--muted:#a9afb2;--green:#5aa6e0;--green-ink:#0d1b28;--brass:#e0b43a;--olive:#a9bb4a;--card:#1d2226;--line:#2f363b;--plot:#262d32;--road:#14171a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Manrope,system-ui,sans-serif}
+h1,h2,h3{font-family:Manrope,system-ui,sans-serif;font-weight:800;line-height:1.15;margin:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+section{padding:48px 0}
+h2{font-size:28px;margin-bottom:8px}
+.lead{color:var(--muted);margin:0 0 24px;max-width:60ch}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.bar{height:5px;background:linear-gradient(90deg,#2f86cc 33%,#8a9a2b 33% 66%,#d4a017 66%)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.logo{width:40px;height:40px}
+.word{background:#fff;color:#111;border:2px solid #111;padding:2px 10px;font-weight:500;letter-spacing:.14em;font-size:16px}
+.brand small{color:var(--muted);font-size:13px}
+.btn{display:inline-block;background:var(--green);color:var(--green-ink);font-weight:700;padding:12px 20px;border-radius:8px;text-decoration:none}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.hero{display:grid;gap:28px;padding:24px 0 48px}
+.hero h1{font-size:clamp(34px,8vw,56px)}
+.hero p{color:var(--muted);max-width:46ch;margin:16px 0 24px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.map{width:100%;height:auto;border:1.5px solid var(--line);border-radius:12px;background:var(--road)}
+.map rect{fill:var(--plot);stroke:var(--line)}
+.map rect.sold{fill:var(--olive)}
+.map text{fill:var(--muted);font:700 7px Manrope,sans-serif}
+.cap{font-size:13px;color:var(--muted);margin-top:8px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.fact b{display:block;font-family:Manrope,system-ui,sans-serif;font-size:22px}
+.fact span{color:var(--muted);font-size:14px}
+.badges{display:grid;gap:12px}
+.badge{background:var(--card);border-left:5px solid var(--brass);border-radius:8px;padding:16px 18px}
+.badge b{display:block;font-size:17px}
+.badge span{color:var(--muted);font-size:14px}
+.projects{display:grid;gap:16px}
+.projects[hidden]{display:none}
+.cities{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
+.city{font:700 15px/1 Manrope,system-ui,sans-serif;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:99px;padding:14px 20px;min-height:44px;cursor:pointer}
+.city[aria-selected="true"]{background:var(--green);border-color:var(--green);color:var(--green-ink)}
+.city:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.ph{aspect-ratio:16/9;background:var(--plot);display:grid;place-items:center;color:var(--muted);font-size:14px}
+.proj div.body{padding:16px}
+.status{display:inline-block;font-size:13px;font-weight:700;padding:3px 10px;border-radius:99px;margin-bottom:8px;background:var(--plot)}
+.status.on{background:var(--brass);color:#16181a}
+.proj h3{font-size:22px}
+.proj p{margin:6px 0 0;color:var(--muted);font-size:15px}
+.contact{background:var(--green);color:var(--green-ink);border-radius:14px;padding:28px 22px}
+.contact h2{margin-bottom:8px}
+.contact .btn{background:#fff;color:#1f6fb0}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
+@media(min-width:760px){.hero{grid-template-columns:1.05fr 1fr;align-items:center}.facts{grid-template-columns:repeat(4,1fr)}.badges{grid-template-columns:1fr 1fr}.projects{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="bar"></div>
+<div class="wrap">
+<header><a class="brand" href="#" aria-label="Parisar Developers"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,3 91,26 91,74 50,97 9,74 9,26" fill="#fff" stroke="#111" stroke-width="3"/><polygon points="16,31 46,17 46,66 16,79" fill="#2f86cc"/><polygon points="52,17 84,31 84,57 52,50" fill="#8a9a2b"/><polygon points="22,81 52,57 84,62 52,87" fill="#d4a017"/><polygon points="48,46 48,64 64,55" fill="#fff"/></svg><span class="word">PARISAR</span><small>Developers</small></a><a class="btn" href="#contact">Contact</a></header>
+</div>
+<div class="wrap">
+<div class="hero">
+<div>
+<h1>Approved plots, delivered on time.</h1>
+<p>Parisar Developers turns land into planned layouts with RERA registration and GUDA approval, so you know exactly what you are buying.</p>
+<div class="cta"><a class="btn" href="#projects">See our projects</a><a class="btn alt" href="#approvals">View approvals</a></div>
+</div>
+<div>
+<svg class="map" id="map" viewBox="0 0 300 200" role="img" aria-label="Sample layout plan with plots and roads"></svg>
+<div class="cap">Sample layout plan. Shaded plots are sold.</div>
+</div>
+</div>
+</div>
+
+<section id="about"><div class="wrap">
+<h2>About Parisar Developers</h2>
+<p class="lead">We develop land into layouts in Gadag, Hubli, Mundargi, Laxmeshwar, Binkadakatti and Kurtkoti. Every layout is planned with clear roads, approved documents and honest dealing. <em>(Add the founder's name and a short story here.)</em></p>
+<div class="facts">
+<div class="fact"><b>2</b><span>Completed layouts</span></div>
+<div class="fact"><b>1</b><span>Ongoing layout</span></div>
+<div class="fact"><b>[ ]</b><span>Years in business</span></div>
+<div class="fact"><b>[ ]</b><span>Families settled</span></div>
+</div>
+</div></section>
+
+<section id="approvals"><div class="wrap">
+<h2>Approvals and registrations</h2>
+<p class="lead">Check these before you buy. We share the documents on request.</p>
+<div class="badges">
+<div class="badge"><b>RERA registered</b><span>Registration No. [add number]</span></div>
+<div class="badge"><b>GUDA approved layout</b><span>Approval No. [add number]</span></div>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Our projects</h2>
+<p class="lead">Choose a city to see our layouts there.</p>
+<div class="cities" role="tablist" aria-label="Choose a city">
+<button class="city" role="tab" id="t-gadag" aria-controls="p-gadag" aria-selected="true">Gadag</button>
+<button class="city" role="tab" id="t-hubli" aria-controls="p-hubli" aria-selected="false" tabindex="-1">Hubli</button>
+<button class="city" role="tab" id="t-mundargi" aria-controls="p-mundargi" aria-selected="false" tabindex="-1">Mundargi</button>
+<button class="city" role="tab" id="t-laxmeshwar" aria-controls="p-laxmeshwar" aria-selected="false" tabindex="-1">Laxmeshwar</button>
+<button class="city" role="tab" id="t-binkadakatti" aria-controls="p-binkadakatti" aria-selected="false" tabindex="-1">Binkadakatti</button>
+<button class="city" role="tab" id="t-kurtkoti" aria-controls="p-kurtkoti" aria-selected="false" tabindex="-1">Kurtkoti</button>
+</div>
+<div class="projects" role="tabpanel" id="p-gadag" aria-labelledby="t-gadag">
+<div class="proj"><div class="ph">Photo of East Park</div><div class="body"><span class="status">Completed</span><h3>East Park</h3><p>[Location, number of plots]</p></div></div>
+<div class="proj"><div class="ph">Photo of Pearl</div><div class="body"><span class="status">Completed</span><h3>Pearl</h3><p>[Location, number of plots]</p></div></div>
+<div class="proj"><div class="ph">Photo of Neelamma Park</div><div class="body"><span class="status on">Ongoing</span><h3>Neelamma Park</h3><p>[Location, plot sizes available]</p></div></div></div>
+<div class="projects" role="tabpanel" id="p-hubli" aria-labelledby="t-hubli" hidden><div class="proj"><div class="ph">Photo of project</div><div class="body"><span class="status">[Completed / Ongoing]</span><h3>[Project name]</h3><p>[Location in Hubli, number of plots]</p></div></div></div>
+<div class="projects" role="tabpanel" id="p-mundargi" aria-labelledby="t-mundargi" hidden><div class="proj"><div class="ph">Photo of project</div><div class="body"><span class="status">[Completed / Ongoing]</span><h3>[Project name]</h3><p>[Location in Mundargi, number of plots]</p></div></div></div>
+<div class="projects" role="tabpanel" id="p-laxmeshwar" aria-labelledby="t-laxmeshwar" hidden><div class="proj"><div class="ph">Photo of project</div><div class="body"><span class="status">[Completed / Ongoing]</span><h3>[Project name]</h3><p>[Location in Laxmeshwar, number of plots]</p></div></div></div>
+<div class="projects" role="tabpanel" id="p-binkadakatti" aria-labelledby="t-binkadakatti" hidden><div class="proj"><div class="ph">Photo of project</div><div class="body"><span class="status">[Completed / Ongoing]</span><h3>[Project name]</h3><p>[Location in Binkadakatti, number of plots]</p></div></div></div>
+<div class="projects" role="tabpanel" id="p-kurtkoti" aria-labelledby="t-kurtkoti" hidden><div class="proj"><div class="ph">Photo of project</div><div class="body"><span class="status">[Completed / Ongoing]</span><h3>[Project name]</h3><p>[Location in Kurtkoti, number of plots]</p></div></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="contact">
+<h2>Book a site visit to Neelamma Park</h2>
+<p>Message us on WhatsApp and we will arrange a visit and share the layout documents.</p>
+<a class="btn" id="wa" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Parisar%20Developers%2C%20I%20would%20like%20to%20visit%20Neelamma%20Park.">Chat on WhatsApp</a>
+</div>
+</div></section>
+
+<div class="wrap"><footer>Parisar Developers · [Office address]</footer></div>
+
+<script>
+(function(){
+var s=document.getElementById('map'),h='',sold={};
+[0,1,2,3,5,6,8,9,11,12,14,16,17,19,21,22,25,26,28,30,33,34].forEach(function(i){sold[i]=1});
+var n=0;
+for(var r=0;r<3;r++){
+  for(var c=0;c<8;c++){
+    var x=14+c*35+(c>3?10:0),y=[14,82,150][r]-(r==2?10:0);
+    h+='<rect class="'+(sold[n]?'sold':'')+'" x="'+x+'" y="'+y+'" width="30" height="'+(r==1?36:40)+'" rx="2"/>';
+    n++;
+  }
+}
+h+='<text x="150" y="68" text-anchor="middle">30 FT ROAD</text>';
+s.innerHTML=h;
+})();
+</script>
+<script>
+(function(){
+var tabs=[].slice.call(document.querySelectorAll('.city'));
+function pick(t,focus){
+tabs.forEach(function(b){
+var on=b===t;
+b.setAttribute('aria-selected',on?'true':'false');
+b.tabIndex=on?0:-1;
+document.getElementById(b.getAttribute('aria-controls')).hidden=!on;
+});
+if(focus)t.focus();
+}
+tabs.forEach(function(b,i){
+b.addEventListener('click',function(){pick(b,false)});
+b.addEventListener('keydown',function(e){
+var k=e.key,j=k==='ArrowRight'?i+1:k==='ArrowLeft'?i-1:k==='Home'?0:k==='End'?tabs.length-1:-1;
+if(j<0)return;
+e.preventDefault();
+pick(tabs[(j+tabs.length)%tabs.length],true);
+});
+});
+})();
+</script>
+</body>
+</html>
